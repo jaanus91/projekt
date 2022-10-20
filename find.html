@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Best Santa page in the world!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Santa Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+        <div class="container-fluid header-title">
+          <div class="row">
+            <div class="col text-center back">
+            
+                <a href="index.html">
+                <table>
+                    <tr>
+                      <td class="cell">
+                        <p>←</p>
+                      </td>
+                      <td class="cell" 
+                      >
+                      <p >Go back To <br />Main Page</p>
+                      </td>
+                    </tr>
+                  </table>
+                </a>
+            </div>
+            <div class="col-6 text-center  main-header">
+              <h1>Santa page</h1>
+            </div>
+            <div class="col text-center"></div>    
+          </div>
+          
+        </div>
+    </header>
+
+    <main>
+        
+      <section class="photo-and-text">
+        <div class="part">
+          <h2 class="find-a-santa-header">Find a santa</h2>
+          <p class="describe-santa">Describe your perfect santa below.</p>
+          <div class="input-pink">
+            <div class="help">
+                <form id="santa-form" action="" onsubmit="return false;">
+              <label for="wish" class="perfect-santa"
+                >My perfect santa is:</label
+              >
+              <textarea
+                class="find-input"
+                id="wish"
+                placeholder="Write All Your Wishes Here..."
+                name="perfect-santa"
+                cols="40"
+                rows="5"
+              ></textarea>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="part">
+          <img class="write-img" src="img/image5.png" alt="santa" />
+        </div>
+      </section>
+      <div class="submit">
+        <input type="submit" form="santa-form" value="Click Here To Find Your Santa!" id="myBtn" class="submit-button">
+        </button>
+      </div>
+    </main>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="modal-text">Congratulations! We found you a perfect santa!</p>
+        <img class="your_santa" src="img/image7.jpg" alt="santa">
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2022 All Rights Reserved</p>
+    </footer>
+
+    <!-- Modaliga seotud koodiread saadud järgnevast allikast: //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal&fbclid=IwAR20hYJmNdDdktNWtHfYRVbeK0ayOoiElshOmseSQj4g0u3dewiY6xPPWW4 -->
+    <script> 
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+        <!-- Boostrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
