@@ -379,3 +379,66 @@ input::placeholder {
     text-decoration: none;
     cursor: pointer;
 }
+
+/*kaota browseri default nupp*/
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+/*nupu üldine kujundus*/
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 58px;
+    padding-top: 0;
+    padding-bottom: 20px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+}
+
+/*radionupp enne vajutust*/
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 31px;
+    height: 31px;
+    border: 3px solid black;
+    border-radius: 100%;
+    background: #fff;
+}
+
+/*vajutatud radionupp ehk nupusisu*/
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 19px;
+    height: 19px;
+    background: black;
+    position: absolute;
+    top: 6px;
+    left: 21px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+/*state järgi kas näita või ära näita nupusisu opacity abil ainult peale vajutust*/
+/*kaota nupusisu (siis kui not checked peale nupuvajutust)*/
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+/*näita nupusisu (siis kui checked peale nupuvajutust)*/
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
